@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gridview_vertical_spacing">16dp</dimen>
+    <dimen name="gridview_horizontal_spacing">14dp</dimen>
+    <dimen name="gridview_margin_top">12dp</dimen>
+    <dimen name="gridview_margin_bottom">12dp</dimen>
+    <dimen name="gridview_margin_start">16dp</dimen>
+    <dimen name="gridview_margin_end">16dp</dimen>
+    
+    
+    <dimen name="gridview_item_height">177dp</dimen>
+</resources>
