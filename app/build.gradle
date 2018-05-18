@@ -1,17 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion Integer.parseInt(COMPILE_SDK)
 
 
 
     defaultConfig {
         applicationId "com.infinity.bannerdemo.app"
-        minSdkVersion 19
-        targetSdkVersion 27
+        minSdkVersion Integer.parseInt(MIN_SDK)
+        targetSdkVersion Integer.parseInt(TARGET_SDK)
         versionCode 1
         versionName "1.0"
-
 
     }
 
@@ -25,7 +24,6 @@ android {
 }
 
 dependencies {
-    implementation project(':main')
-    implementation project(':base')
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation "com.android.support:appcompat-v7:${SUPPORT_LIB}"
 }
