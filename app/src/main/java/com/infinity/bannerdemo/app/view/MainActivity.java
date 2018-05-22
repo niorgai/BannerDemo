@@ -1,3 +1,15 @@
+/*
+ * FileName: MainActivity.java
+ *
+ * Description:
+ *
+ * Author: Infinity
+ *
+ * Email: 309212292@qq.com
+ *
+ * Ver 1.0, 2018-05-22, create file.
+ */
+
 package com.infinity.bannerdemo.app.view;
 
 import android.content.Intent;
@@ -15,6 +27,7 @@ import com.infinity.bannerdemo.app.presenter.ImageAdapter;
 import java.util.ArrayList;
 
 import static com.infinity.bannerdemo.app.utils.Constants.IMAGE_ID;
+import static com.infinity.bannerdemo.app.utils.ImageUtils.sArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,10 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initGridView() {
         mGridView = findViewById(R.id.grid_view);
-        ArrayList<ImageItem> arrayList = new ArrayList<>();
-        initArrayList(arrayList);
+        initArrayList(sArrayList);
         mAdapter = new ImageAdapter(MainActivity.this);
-        mAdapter.setImageList(arrayList);
+        mAdapter.setImageList(sArrayList);
         mGridView.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -50,10 +62,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initArrayList(ArrayList<ImageItem> arrayList) {
+        arrayList.clear();
         arrayList.add(new ImageItem(R.drawable.image_1));
         arrayList.add(new ImageItem(R.drawable.image_2));
         arrayList.add(new ImageItem(R.drawable.image_3));
         arrayList.add(new ImageItem(R.drawable.image_4));
         arrayList.add(new ImageItem(R.drawable.image_5));
+        arrayList.add(new ImageItem(R.drawable.image_6));
+        arrayList.add(new ImageItem(R.drawable.image_7));
+        arrayList.add(new ImageItem(R.drawable.image_8));
+        arrayList.add(new ImageItem(R.drawable.image_9));
+        arrayList.add(new ImageItem(R.drawable.image_10));
     }
 }

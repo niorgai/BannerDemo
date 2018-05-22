@@ -16,6 +16,7 @@
         android:paddingEnd="@dimen/gridview_margin_end"
         android:paddingStart="@dimen/gridview_margin_start"
         android:paddingBottom="@dimen/gridview_margin_bottom"
+        android:scrollbarStyle="outsideOverlay"
         >
     </GridView>
 
