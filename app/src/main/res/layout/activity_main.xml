@@ -4,10 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <TextView
+    tools:context=".view.MainActivity">
+    <GridView
+        android:id="@+id/grid_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello JQ"/>
+        android:numColumns="3"
+        android:verticalSpacing="@dimen/gridview_vertical_spacing"
+        android:horizontalSpacing="@dimen/gridview_horizontal_spacing"
+        android:paddingTop="@dimen/gridview_margin_top"
+        android:paddingEnd="@dimen/gridview_margin_end"
+        android:paddingStart="@dimen/gridview_margin_start"
+        android:paddingBottom="@dimen/gridview_margin_bottom"
+        android:scrollbarStyle="outsideOverlay"
+        >
+    </GridView>
 
 </android.support.constraint.ConstraintLayout>
