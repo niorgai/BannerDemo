@@ -21,6 +21,7 @@ import android.widget.GridView;
 import android.widget.AdapterView.OnItemClickListener;
 
 import com.infinity.bannerdemo.app.R;
+import com.infinity.bannerdemo.app.utils.Constants;
 import com.infinity.bannerdemo.app.utils.ImageUtils.ImageItem;
 import com.infinity.bannerdemo.app.presenter.ImageAdapter;
 
@@ -63,15 +64,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void initArrayList(ArrayList<ImageItem> arrayList) {
         arrayList.clear();
-        arrayList.add(new ImageItem(R.drawable.image_1));
-        arrayList.add(new ImageItem(R.drawable.image_2));
-        arrayList.add(new ImageItem(R.drawable.image_3));
-        arrayList.add(new ImageItem(R.drawable.image_4));
-        arrayList.add(new ImageItem(R.drawable.image_5));
-        arrayList.add(new ImageItem(R.drawable.image_6));
-        arrayList.add(new ImageItem(R.drawable.image_7));
-        arrayList.add(new ImageItem(R.drawable.image_8));
-        arrayList.add(new ImageItem(R.drawable.image_9));
-        arrayList.add(new ImageItem(R.drawable.image_10));
+        for (int i = 1; i <= Constants.IMAGE_COUNT; i++) {
+            arrayList.add(new ImageItem(getResources().getIdentifier("image_" + i,
+                    "drawable", getPackageName())));
+        }
     }
 }
