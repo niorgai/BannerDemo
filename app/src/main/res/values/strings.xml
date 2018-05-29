@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Banner Demo</string>
+    <string name="play_auto_scroll">Play</string>
+    <string name="stop_auto_scroll">Play</string>
 </resources>
