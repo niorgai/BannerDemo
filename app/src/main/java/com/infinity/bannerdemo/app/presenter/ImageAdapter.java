@@ -78,7 +78,6 @@ public class ImageAdapter extends BaseAdapter {
                 .build();
         DraweeController controller = Fresco.newDraweeControllerBuilder()
                 .setImageRequest(request)
-                .setUri(uri)
                 .setOldController(itemHolder.thumbnail.getController())
                 .build();
         itemHolder.thumbnail.setController(controller);

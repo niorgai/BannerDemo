@@ -13,6 +13,7 @@
 package com.infinity.bannerdemo.app.view;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -65,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
     private void initArrayList(ArrayList<ImageItem> arrayList) {
         arrayList.clear();
         for (int i = 1; i <= Constants.IMAGE_COUNT; i++) {
-            arrayList.add(new ImageItem(getResources().getIdentifier("image_" + i,
-                    "drawable", getPackageName())));
+            int imageId = getResources().getIdentifier("image_" + i, "drawable", getPackageName());
+            arrayList.add(new ImageItem(imageId, Uri.parse("res://" + getPackageName() + "/" + imageId)));
         }
     }
 }

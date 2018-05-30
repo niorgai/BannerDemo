@@ -12,15 +12,19 @@
 
 package com.infinity.bannerdemo.app.utils;
 
+import android.net.Uri;
+
 import java.util.ArrayList;
 
 public class ImageUtils {
 
     public static class ImageItem {
         private int mImageId;
+        private Uri mImageUri;
 
-        public ImageItem(int drawableId) {
+        public ImageItem(int drawableId, Uri imageUri) {
             mImageId = drawableId;
+            mImageUri = imageUri;
         }
 
         public int getImageId() {
@@ -29,6 +33,14 @@ public class ImageUtils {
 
         public void setImageId(int imageId) {
             mImageId = imageId;
+        }
+
+        public Uri getImageUri() {
+            return mImageUri;
+        }
+
+        public void setImageUri(Uri imageUri) {
+            mImageUri = imageUri;
         }
     }
 
